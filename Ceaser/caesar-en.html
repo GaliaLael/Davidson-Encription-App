@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Caesar Cipher</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
+
+<body class="caesar" dir="ltr">
+  <nav>(navbar goes here)</nav>
+  <div class="grid-container">
+    <div class="header">
+      <h1>Caesar Cipher</h1>
+    </div>
+    <!-- first textbox - original message goes here -->
+    <div class="message">
+      <form>
+        <label for="text-input">The message I want to encript:</label><br>
+        <textarea id="text-input" cols="50" rows="10" spellcheck="false"></textarea>
+        <br>
+        <label for="key-number">Encription key:</label>
+        <button type="button" class="number-button" onClick="decrementHandler()">-</button>
+        <input type="number" id="key-number" size="4" min="0" max="21" value="0" onchange="caesar()">
+        <button type="button" class="number-button" onClick="incrementHandler()">+</button>
+        <button type="reset" class="secondary" onClick="resetHandler()">Clear</button>
+      </form>
+      <hr>
+    </div>
+    <div class="message">
+      <form>
+        <label for="encripted">Encripted message:</label>
+        <textarea id="encripted" cols="50" rows="10" spellcheck="false"></textarea>
+      </form>
+      <button onClick="copyTextHandler()">Copy to clipboard</button>
+      <button id='btnSendEmail' onclick="openDiv();">Send by email</button>
+    </div>
+
+    <!-- hidden email form -->
+    <fieldset class="divForm" hidden="hidden">
+      <legend>&nbsp;Send email&nbsp; </legend>
+      <div class="sade float">
+        <lable for="depreciation:">My name:</lable><br>
+        <input class="name input-line" type="text" name="name" id="tbSender" size="26"><br><br>
+      </div>
+
+      <div class="sade float">
+        <lable for="email">Send to email:</lable><br>
+        <input class="email input-line" type="text" name="email" id="taEmail" size="26"><br>
+
+      </div>
+
+      <div class="button clear">
+        <button id='btnSend' onclick="sendEmail();"> Send </button>
+        <button class="close secondary" onclick="closeDiv();"> X </button>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="../script.js"></script>
+  <script type="text/javascript" src="./scripts/caesar-en.js"></script>
+</body>
+
+</html>

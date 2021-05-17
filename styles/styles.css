@@ -1,0 +1,292 @@
+/****** COLORS ******/
+:root {
+  --main-text-color: #222222;
+  --lighter-text: #555555;
+  --card-bg-color: #dddddd;
+  --box-border: #aaaaaa;
+  --button-color: #17b39e;
+  --spacing: 16px;
+}
+
+/****************************************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-repeat: no-repeat;
+  color: var(--main-text-color);
+  font-family: "Arimo", sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+
+body:dir(rtl) {
+  font-family: "Arimo", sans-serif;
+}
+
+body:dir(ltr) {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  background-color: var(--card-bg-color);
+  box-shadow: 0 6px 6px #0000003b;
+  color: var(--main-text-color);
+  height: 52px;
+  padding-left: 160px;
+  padding-right: 160px;
+  text-align: center;
+}
+
+ul {
+  display: inline;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.english {
+  float: left;
+}
+
+.hebrew {
+  float: right;
+}
+
+li a {
+  color: var(--main-text-color);
+  display: block;
+  padding: var(--spacing);
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #18073d;
+  color: var(--card-bg-color);
+}
+
+.chosen {
+  background-color: #18073d;
+  color: var(--card-bg-color);
+}
+
+h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: var(--spacing);
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 12px;
+  margin-top: 0px;
+}
+
+textarea {
+  border: 1px solid var(--box-border);
+  border-bottom: 2px solid var(--box-border);
+  border-radius: 4px;
+  color: var(--lighter-text);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-y: auto;
+  padding: 1px 6px;
+  resize: none;
+  scrollbar-color: var(--box-border) #eeeeee;
+  scrollbar-width: thin;
+  width: 500px;
+}
+
+textarea:focus {
+  border: 1px solid var(--button-color);
+  border-bottom: 2px solid var(--button-color);
+  box-shadow: 0 0 3px 1px var(--button-color);
+}
+
+fieldset {
+  border-radius: 4px;
+  grid-column: 1 / 3;
+  margin: var(--spacing);
+}
+
+button {
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 100px;
+  box-shadow: 0 2px 2px #0000003b;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 6px;
+  padding: 5px 10px;
+}
+
+button.secondary {
+  background-color: inherit;
+  border: none;
+  box-shadow: none;
+  color: var(--button-color);
+  font-weight: 400;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-color);
+  box-shadow: 0 2px 2px #0000003b;
+  color: #fff;
+  filter: brightness(110%);
+  font-weight: 400;
+}
+
+button:active {
+  background-color: var(--button-color);
+  box-shadow: 0 1px 0 #0000003b;
+  filter: brightness(90%);
+}
+
+hr {
+  border: var(--box-border);
+  margin: 24px 0;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  border: 1px solid var(--button-color);
+  border-bottom: 2px solid var(--button-color);
+  box-shadow: 0 0 3px 1px var(--button-color);
+}
+
+.grid-container {
+  align-items: start;
+  background-color: var(--card-bg-color);
+  border-radius: 3px;
+  box-shadow: 0 10px 20px #00000030, 0 6px 6px #0000003b;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: var(--spacing);
+  margin: var(--spacing) auto;
+  padding-bottom: var(--spacing);
+  width: 530px;
+}
+
+.header {
+  background-color: #18073d;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 3px 6px #0000003b;
+  grid-column: 1 / 3;
+  height: 100px;
+  padding: var(--spacing);
+}
+
+.message {
+  grid-column: 1 / 3;
+  min-height: 260px;
+  padding: var(--spacing);
+}
+
+
+
+
+/************** SUBSTITUTION STYLES **************************************************/
+body.substitution {
+  background-image: linear-gradient(to bottom right, #035aa6, #17b399);
+}
+
+.key-title {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.alphabet {
+  /* use monospace font to keep key in line with alphabet */
+  font-family: "Cousine",
+    'Roboto Mono', monospace;
+  letter-spacing: 6px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#key {
+  /* use monospace font to keep key in line with alphabet */
+  font-family: "Cousine",
+    'Roboto Mono',
+    monospace;
+}
+
+.input-line {
+  border: 1px solid var(--box-border);
+  color: var(--lighter-text);
+  letter-spacing: 6px;
+  padding: 4px;
+}
+
+
+#error {
+  margin-top: 6px;
+}
+
+.error-style {
+  color: red;
+}
+
+.error-border {
+  border: 2px solid red;
+}
+
+
+/************** CAESAR STYLES ********************************************************/
+body.caesar {
+  background-image: linear-gradient(to bottom right, #c59d17, #d61103);
+}
+
+.number-button {
+  background-color: #fff;
+  border: 1px solid var(--box-border);
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--main-text-color);
+  display: inline-block;
+  height: 30px;
+  margin: 0;
+}
+
+#key-number {
+  border: 1px solid var(--box-border);
+  height: 30px;
+  margin: 0;
+  text-align: center;
+}
+
+/* hide number spinners */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hide number spinners Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/************** FREQUENCY ANALYSIS STYLES ********************************************/
+body.frequency {
+  background-image: linear-gradient(to bottom right, #ff378a, #2c0d9c);
+}
+
+#frequency-analysis {
+  display: grid;
+  font-family: "Cousine",
+    'Roboto Mono',
+    monospace;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  grid-template-rows: repeat(6, 1fr);
+  margin-bottom: var(--spacing);
+  padding: var(--spacing);
+}

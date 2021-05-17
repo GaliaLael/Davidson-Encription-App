@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>צופן קיסר</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
+
+<body class="caesar" dir="rtl">
+  <nav>(navbar goes here)</nav>
+  <div class="grid-container">
+    <div class="header">
+      <h1>צופן קיסר</h1>
+    </div>
+    <!-- first textbox - original message goes here -->
+    <div class="message">
+      <form>
+        <label for="text-input">ההודעה שאני רוצה להצפין:</label><br>
+        <textarea id="text-input" cols="50" rows="10"></textarea>
+        <br>
+        <label for="key-number">המפתח להצפנה (בין 0 ל-21):</label>
+        <button type="button" class="number-button" onClick="decrementHandler()">-</button>
+        <input type="number" id="key-number" size="4" min="0" max="21" value="0" onchange="caesar()">
+        <button type="button" class="number-button" onClick="incrementHandler()">+</button>
+        <button type="reset" class="secondary" onClick="resetHandler()">ניקוי טופס</button>
+      </form>
+      <hr>
+    </div>
+    <div class="message">
+      <form>
+        <label for="encripted">ההודעה המוצפנת:</label>
+        <textarea id="encripted" cols="50" rows="10"></textarea>
+      </form>
+      <button onClick="copyTextHandler()">העתקת ההודעה המוצפנת</button>
+      <button id='btnSendEmail' onclick="openDiv();">שליחת ההודעה במייל</button>
+    </div>
+    <fieldset class="divForm" hidden="hidden">
+      <legend>&nbsp;שליחת דוא"ל&nbsp; </legend>
+      <div class="sade float">
+        <lable for="depreciation:">השם שלי:</lable><br>
+        <input class="name input-line" type="text" name="name" id="tbSender" size="26"><br><br>
+      </div>
+
+      <div class="sade float">
+        <lable for="email">שליחה למייל:</lable><br>
+        <input class="email input-line" type="text" name="email" id="taEmail" size="26"><br>
+
+      </div>
+
+      <div class="button clear">
+        <button id='btnSend' onclick="sendEmail();"> שליחה </button>
+        <button class="close secondary" onclick="closeDiv();"> X </button>
+      </div>
+
+    </fieldset>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="../script.js"></script>
+  <script src="./scripts/caesar.js"></script>
+</body>
+
+</html>

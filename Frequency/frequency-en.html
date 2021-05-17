@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Frequency Analysis</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- monospace font for frequency analysis field. only replace with other monospace fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="frequency" dir="ltr">
+  <nav>(navbar goes here)</nav>
+  <div class="grid-container">
+    <div class="header">
+      <h1>Frequency Analysis</h1>
+    </div>
+    <!-- textbox - message goes here -->
+    <div class="message">
+      <form id="form">
+        <label for="text-input">The message I want to analyze:</label><br>
+        <textarea id="text-input" cols="50" rows="10" spellcheck="false"></textarea>
+        <br>
+        <button type="button" onClick="frequency()">Analize</button>
+        <button type="reset" class="secondary" onClick="resetHandler()">Clear</button>
+        <br>
+      </form>
+    </div>
+    <fieldset class="divForm">
+      <legend>&nbsp;Rate of each letter (in percentage):&nbsp;</legend>
+      <!-- <label for="frequency-analysis">Rate of each letter (in percentage):</label><br><br> -->
+      <div id="frequency-analysis">
+        <div class="abc">a:</div>
+        <div class="abc">b:</div>
+        <div class="abc">c:</div>
+        <div class="abc">d:</div>
+        <div class="abc">e:</div>
+        <div class="abc">f:</div>
+        <div class="abc">g:</div>
+        <div class="abc">h:</div>
+        <div class="abc">i:</div>
+        <div class="abc">j:</div>
+        <div class="abc">k:</div>
+        <div class="abc">l:</div>
+        <div class="abc">m:</div>
+        <div class="abc">n:</div>
+        <div class="abc">o:</div>
+        <div class="abc">p:</div>
+        <div class="abc">q:</div>
+        <div class="abc">r:</div>
+        <div class="abc">s:</div>
+        <div class="abc">t:</div>
+        <div class="abc">u:</div>
+        <div class="abc">v:</div>
+        <div class="abc">w:</div>
+        <div class="abc">x:</div>
+        <div class="abc">y:</div>
+        <div class="abc">z:</div>
+      </div>
+    </fieldset>
+  </div>
+
+  <script src="./scripts/frequency-en.js"></script>
+</body>
+
+</html>

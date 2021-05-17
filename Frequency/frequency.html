@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ניתוח תדירות</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="frequency" dir="rtl">
+  <nav>(navbar goes here)</nav>
+  <div class="grid-container">
+    <div class="header">
+      <h1>ניתוח תדירות</h1>
+    </div>
+    <!-- textbox - message goes here -->
+    <div class="message">
+      <form id="form">
+        <label for="text-input">ההודעה שאני רוצה לנתח:</label><br>
+        <textarea id="text-input" cols="50" rows="10"></textarea>
+        <br>
+        <button type="button" onClick="frequency()">ניתוח ההודעה</button>
+        <button type="reset" class="secondary" onClick="resetHandler()">מחיקה</button>
+        <br>
+      </form>
+    </div>
+    <fieldset class="divForm">
+      <legend>&nbsp;תדירות הופעת כל אות (באחוזים):&nbsp;</legend>
+      <div id="frequency-analysis">
+        <div class="abc">א:</div>
+        <div class="abc">ב:</div>
+        <div class="abc">ג:</div>
+        <div class="abc">ד:</div>
+        <div class="abc">ה:</div>
+        <div class="abc">ו:</div>
+        <div class="abc">ז:</div>
+        <div class="abc">ח:</div>
+        <div class="abc">ט:</div>
+        <div class="abc">י:</div>
+        <div class="abc">כ:</div>
+        <div class="abc">ל:</div>
+        <div class="abc">מ:</div>
+        <div class="abc">נ:</div>
+        <div class="abc">ס:</div>
+        <div class="abc">ע:</div>
+        <div class="abc">פ:</div>
+        <div class="abc">צ:</div>
+        <div class="abc">ק:</div>
+        <div class="abc">ר:</div>
+        <div class="abc">ש:</div>
+        <div class="abc">ת:</div>
+      </div>
+    </fieldset>
+
+  </div>
+
+  <script src="./scripts/frequency.js"></script>
+</body>
+
+</html>
