@@ -281,9 +281,6 @@ body.frequency {
 
 #frequency-analysis {
   display: grid;
-  font-family: "Cousine",
-    'Roboto Mono',
-    monospace;
   grid-auto-flow: column;
   grid-gap: 10px;
   grid-template-rows: repeat(6, 1fr);
