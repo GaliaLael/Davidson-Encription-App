@@ -16,7 +16,6 @@
 }
 
 body {
-  background-repeat: no-repeat;
   color: var(--main-text-color);
   font-family: "Arimo", sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -193,7 +192,11 @@ input[type="text"]:focus {
 
 /************** SUBSTITUTION STYLES **************************************************/
 body.substitution {
-  background-image: linear-gradient(to bottom right, #035aa6, #17b399);
+  background: linear-gradient(to bottom right, #035aa6, #17b399) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .key-title {
@@ -240,7 +243,11 @@ body.substitution {
 
 /************** CAESAR STYLES ********************************************************/
 body.caesar {
-  background-image: linear-gradient(to bottom right, #c59d17, #d61103);
+  background: linear-gradient(to bottom right, #c59d17, #d61103) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .number-button {
@@ -276,7 +283,11 @@ input[type="number"] {
 
 /************** FREQUENCY ANALYSIS STYLES ********************************************/
 body.frequency {
-  background-image: linear-gradient(to bottom right, #ff378a, #2c0d9c);
+  background: linear-gradient(to bottom right, #ff378a, #2c0d9c) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #frequency-analysis {
