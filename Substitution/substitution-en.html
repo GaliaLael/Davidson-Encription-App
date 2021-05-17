@@ -15,7 +15,14 @@
 </head>
 
 <body class="substitution">
-  <nav>(navbar goes here)</nav>
+  <nav>
+    <ul>
+      <li class="english"><a href="../Ceasar/caesar-en.html">Caesar Cipher</a></li>
+      <li class="english"><a href="#" class="chosen">Substitution Cipher</a></li>
+      <li class="english"><a href="../Frequency/frequency-en.html">Frequency Analysis</a></li>
+      <li class="hebrew"><a href="substitution.html">עברית</a></li>
+    </ul>
+  </nav>
   <div class="grid-container">
     <div class="header">
       <h1>Substitution Cipher</h1>
@@ -28,7 +35,7 @@
         <br><br>
         <label class="key-title">Encription key:</label>
         <label for="key" class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</label><br>
-        <input type="text" id="key" class="input-line" size="26" value="ABCDEFGHIJKLMNOPQSRTUVWXYZ"
+        <input type="text" id="key" class="input-line" size="40" value="abcdefghijklmnopqrstuvwxyz"
           onkeydown="keyValidationCheck()">
         <p id="error" hidden="hidden"></p>
         <button type="button" onClick="shuffleHandler()">Shuffle!</button>
