@@ -12,4 +12,5 @@ send them to each other and decipher them using letter frequency analysis: compa
 
 The app works in Hebrew and English.
 
+### *Note: this app is not responsive and is intended for desktop only.*
 ### https://galialael.github.io/Davidson-Encription-App/
